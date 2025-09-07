@@ -53,6 +53,7 @@ A **responsive**, **single-page** web app built with **HTML5**, **CSS3**, and **
 
 ## Author
 
-**Prajwal Bhagat**  
+**RITHIKA NATARAJAN**  
+
 
 
