@@ -1,0 +1,75 @@
+<!DOCTYPE html>                 
+<html lang="en">
+<head>                                  
+    <meta charset="UTF-8">                 
+    <title>Personal Expense Tracker</title>           <!-- Sets the title that appears in the browser tab  -->
+    <link rel="stylesheet" href="style.css">       <!-- links an external CSS file to style  HTML -->
+</head>
+
+<body>
+
+    <header>                           
+        <h1>Expense Tracker</h1>
+        <p class="tagline">Track • Budget • Save</p>        
+    </header>
+
+    
+    <main>                                
+                                                          <!-- Expense Entry Panel -->
+      
+        <section class="card entry-card">               
+            <h2>Add New Expense</h2>                               <!-- each section should have a heading -->       
+
+            <form id="expense-form">                                                     <!-- form to enter new expense -->
+                <input type="text" id="desc" placeholder="Description" required>            <!--  creates text input field -->
+                <input type="number" id="amt" placeholder="Amount (₹)" step="1" required>       <!--  placeholder,  text showing what to enter-->
+                <select id="category" required>                                              <!--  dropdown menu for selecting category -->
+                    <option value="" disabled selected>Category</option>                    <!--   disabled: cannot be selected after choosing another option  , selected: This option appears by default -->
+                    <option>Food</option>
+                    <option>Transportation</option>
+                    <option>Entertainment</option>
+                </select>
+                <input type="date" id="date" required>                              <!-- Shows a calendar -->  
+                <button type="submit">Add Expense</button>
+            </form>
+
+        </section>
+
+                                                   <!-- Budget Cards -->
+      
+        <section class="budget-grid">                  <!--  groups the three budget cards together  -->
+
+            <div class="card budget-card">
+                <h3>Food</h3>
+                <div class="progress-bar" id="food-bar" style="--used:0%;"></div>         <!--  progress bar  -->
+                <p><span class="used" id="food-used">₹0</span> / ₹5,000</p>               <!--  used and total amount  -->
+            </div>
+
+            <div class="card budget-card">
+                <h3>Transportation</h3>
+                <div class="progress-bar" id="transportation-bar" style="--used:0%;"></div>
+                <p><span class="used" id="transportation-used">₹0</span> / ₹3,000</p>
+            </div>
+
+            <div class="card budget-card">
+                <h3>Entertainment</h3>
+                <div class="progress-bar" id="entertainment-bar" style="--used:0%;"></div>
+                <p><span class="used" id="entertainment-used">₹0</span> / ₹5,000</p>
+            </div>
+
+        </section>
+
+        
+        <section class="card">                  <!-- expense List Section -->
+            <h2>Expenses</h2>                   <!--  groups the expense list with its heading  -->
+            <ul id="expense-list"></ul>         <!-- unordered list  -->
+        </section>
+    </main>
+
+   
+    <script src="script.js"></script>         <!-- connecting JS file here as this ensures HTML loads first before js runs and prevents js errors when trying to find elements-->
+
+</body>
+</html>
+
+ 
